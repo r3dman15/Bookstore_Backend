@@ -1,6 +1,13 @@
 package Domain;
 
+import java.util.ArrayList;
+
 public class Buyer extends User {
+
+    private class Cart extends ArrayList<Book> {
+        public Cart (){}
+    }
+
     private String email;
     private boolean membership;
     private int wallet;
@@ -26,9 +33,13 @@ public class Buyer extends User {
         return wallet;
     }
 
-    public Cart getCart(){
-        return cart;
 
+    public void addToCart(Book book) {
+        cart.add(book);
+    }
+
+    public void remove(Book book) {
+        cart.remove(book);
     }
 
     public void setEmail(String email) {
