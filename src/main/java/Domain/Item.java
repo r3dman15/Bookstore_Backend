@@ -1,30 +1,26 @@
 package Domain;
 
 public class Item {
-    private String itemName;
+    private String name;
     private String description;
     private String category;
     private double price;
-    private int quantity;
-    private boolean addToCart;
-    private boolean discount;
+    private boolean isDiscount;
 
-    public Item(String itemName, String description, String category, double price, int quantity, boolean addToCart, boolean discount){
-        this.itemName = itemName;
+    public Item(String name, String description, double price, boolean isDiscount){
+        this.name = name;
         this.description = description;
         this.category = "Book";
-        this.price = 0;
-        this.quantity = 0;
-        this. addToCart = false;
-        this.discount = false;
+        this.price = price;
+        this.isDiscount = false;
     }
 
-    public String getItemName() {
-        return itemName;
+    public String getName() {
+        return name;
     }
 
-    public void setItemName(String itemName) {
-        this.itemName = itemName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDescription() {
@@ -51,27 +47,11 @@ public class Item {
         this.price = price;
     }
 
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    public boolean isAddToCart() {
-        return addToCart;
-    }
-
-    public void setAddToCart(boolean addToCart) {
-        this.addToCart = addToCart;
-    }
-
     public boolean isDiscount() {
-        return discount;
+        return isDiscount;
     }
 
-    public void setDiscount(boolean discount) {
-        this.discount = discount;
+    public void setIsDiscount(boolean Discount) {
+        isDiscount = Discount;
     }
 }
