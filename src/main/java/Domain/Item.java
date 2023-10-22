@@ -7,10 +7,10 @@ public class Item {
     private double price;
     private boolean isDiscount;
 
-    public Item(String name, String description, double price, boolean isDiscount){
+    public Item(String name, String description, String category, double price, boolean isDiscount){
         this.name = name;
         this.description = description;
-        this.category = "Book";
+        this.category = category;
         this.price = price;
         this.isDiscount = false;
     }
