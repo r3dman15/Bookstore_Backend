@@ -3,16 +3,20 @@ package Domain;
 public class Item {
     private String name;
     private String description;
-    private String category;
+    private Category category;
     private double price;
     private boolean isDiscount;
 
-    public Item(String name, String description, String category, double price, boolean isDiscount){
+    public Item(String name, String description, Category category, double price, boolean isDiscount){
         this.name = name;
         this.description = description;
         this.category = category;
         this.price = price;
         this.isDiscount = false;
+    }
+    public enum Category {
+        BOOK,
+        CUSTOM
     }
 
     public String getName() {
@@ -31,14 +35,6 @@ public class Item {
         this.description = description;
     }
 
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
     public double getPrice() {
         return price;
     }
@@ -53,5 +49,13 @@ public class Item {
 
     public void setIsDiscount(boolean Discount) {
         isDiscount = Discount;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }
