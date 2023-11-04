@@ -8,7 +8,6 @@ public class Buyer extends User {
         public Cart (){}
     }
 
-    private String email;
     private boolean membership;
     private int wallet;
     private Cart cart;
@@ -16,14 +15,10 @@ public class Buyer extends User {
 
 
     public Buyer(String firstName, String lastName, String id, String email) {
-        super(firstName, lastName, id);
-        this.email = email;
+        super(firstName, lastName, id, email);
         this.membership = false;
         this.wallet = 0;
         this.cart = new Cart();
-    }
-    public String getEmail() {
-         return email;
     }
 
     public Boolean getMembership() {
@@ -42,10 +37,6 @@ public class Buyer extends User {
         cart.remove(book);
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public void setMembership(boolean membership) {
         this.membership = membership;
     }
@@ -53,4 +44,6 @@ public class Buyer extends User {
     public void setWallet(int wallet) {
         this.wallet = wallet;
     }
+
 }
+

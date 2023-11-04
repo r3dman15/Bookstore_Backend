@@ -3,15 +3,16 @@ package Domain;
 public class User {
 
     private  String firstName;
-
     private String lastName;
+    private String email;
 
     private String id;
 
-    public User(String firstName, String lastName, String id) {
+    public User(String firstName, String lastName, String id,String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.id = id;
+        this.email = email;
     }
 
     public String getFirstName() {
@@ -36,5 +37,13 @@ public class User {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
